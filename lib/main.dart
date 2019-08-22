@@ -4,6 +4,7 @@ import 'package:video_player_demo/item/chewie_page.dart';
 import 'package:video_player_demo/item/fullscreen_test_page.dart';
 import 'package:video_player_demo/item/ijk_player_page.dart';
 import 'package:video_player_demo/item/video_player_page.dart';
+import 'package:video_player_demo/item/web_view_player.dart';
 import 'package:video_player_demo/util/no_splash.dart';
 
 void main() {
@@ -74,6 +75,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 go(FullScreenPage());
               },
               child: Text('full screen'),
+              color: Colors.cyan,
+            ),
+            MaterialButton(
+              onPressed: () {
+                go(WebViewPage());
+              },
+              child: Text('web_view'),
               color: Colors.cyan,
             ),
             TextField(

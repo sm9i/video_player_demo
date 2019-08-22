@@ -26,6 +26,7 @@ dependencies:
   video_player: 0.10.1+6
   chewie: 0.9.7
   flutter_ijkplayer: 0.3.3
+  webview_flutter: 0.3.13
 
 dev_dependencies:
   flutter_test:
