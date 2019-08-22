@@ -4,6 +4,7 @@ import 'package:video_player_demo/item/chewie_page.dart';
 import 'package:video_player_demo/item/fullscreen_test_page.dart';
 import 'package:video_player_demo/item/ijk_player_page.dart';
 import 'package:video_player_demo/item/video_player_page.dart';
+import 'package:video_player_demo/util/no_splash.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       title: '',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        // splashFactory: NoSplashFactory(),
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -73,6 +75,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('full screen'),
               color: Colors.cyan,
+            ),
+            TextField(
+              decoration: InputDecoration(hintText: '水波纹'),
+            ),
+            Theme(
+              data:
+                  Theme.of(context).copyWith(splashFactory: NoSplashFactory()),
+              child: TextField(
+                decoration: InputDecoration(hintText: '无水波纹'),
+              ),
             )
           ],
         ),
